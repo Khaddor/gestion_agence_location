@@ -15,6 +15,12 @@ class CreateContractsTable extends Migration
     {
         Schema::create('contracts', function (Blueprint $table) {
             $table->id();
+            $table->date('date');
+            $table->date('close_date');
+            $table->integer('rent_amount');
+            $table->string('rent_type');
+            $table->foreignId('Property_id');
+            $table->foreignId('Tenant_id');
             $table->timestamps();
         });
     }

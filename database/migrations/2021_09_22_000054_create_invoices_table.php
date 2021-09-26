@@ -15,6 +15,13 @@ class CreateInvoicesTable extends Migration
     {
         Schema::create('invoices', function (Blueprint $table) {
             $table->id();
+            $table->integer('number');
+            $table->date('date');
+            $table->string('rent_type');
+            $table->integer('amount');
+            $table->date('payment_date');
+            $table->foreignId('Property_id');
+            $table->foreignId('Tenant_id');
             $table->timestamps();
         });
     }

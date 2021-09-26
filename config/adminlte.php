@@ -154,6 +154,7 @@ return [
     'sidebar_scrollbar_auto_hide' => 'l',
     'sidebar_nav_accordion' => true,
     'sidebar_nav_animation_speed' => 300,
+    'width' => 100,
 
     /*
     |--------------------------------------------------------------------------
@@ -169,7 +170,7 @@ return [
 
     'right_sidebar' => false,
     'right_sidebar_icon' => 'fas fa-cogs',
-    'right_sidebar_theme' => 'dark',
+    'right_sidebar_theme' => 'light',
     'right_sidebar_slide' => true,
     'right_sidebar_push' => true,
     'right_sidebar_scrollbar_theme' => 'os-theme-light',
@@ -241,20 +242,42 @@ return [
             'type' => 'sidebar-menu-search',
             'text' => 'search',
         ],
+
+        [
+            'text' => 'Dashboard',
+            'url'  => '/',
+            'icon' => 'fas fa-fw fa-book',
+        ],
         [
             'text' => 'profile',
-            'url'  => 'admin/settings',
+            'url'  => '#',
             'icon' => 'fas fa-fw fa-user',
         ],
-
-
+    
        
-     
         [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
-           
+            'text'    => 'Manage Properties',
+            'icon'    => 'fas fa-fw fa-building',
+            'submenu' => [
+                [
+                    'text' => 'My Properties',
+                    'route'  => 'properties_index',
+                    'icon'    => 'fas fa-fw fa-building',
+                    
+                ],
+                [
+                    'text' => 'Properties types',
+                    'url'  => '#',
+                ],
+            ],
         ],
+        [
+            'text' => 'Manage Tenants',
+            'icon' => 'fas fa-fw fa-users',
+            'route' => 'tenants_index'
+        ],
+     
+     
 
 
         ['header' => 'labels'],

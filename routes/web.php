@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\admin\PropretyController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\tenantController;
+use App\Models\Property;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 /*
@@ -16,4 +20,21 @@ use Illuminate\Support\Facades\Auth;
 
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+
+/*** Properties ***/
+Route::get('/properties' , [PropretyController::class , 'index'])->name('properties_index');
+Route::get('/properties/add' , [PropretyController::class , 'index_add'])->name('property_add');
+Route::post('/properties/add' , [PropretyController::class , 'store'])->name('property.store');
+Route::get('/properties/edit/{id}' , [PropretyController::class ,'index_edit']);
+Route::post('/propetries/edit' , [PropretyController::class , 'update' ])->name('property.edit');
+
+
+/*** Tenants ***/
+Route::get('/tenants' , [tenantController::class , 'index'])->name('tenants_index');
+Route::get('/tenants/add' , [tenantController::class , 'index_add'])->name('tenant_add');
+Route::post('/tenants/add' , [tenantController::class , 'store'])->name('tenant.store');
+Route::get('/tenants/edit/{id}' , [tenantController::class , 'index_edit'])->name('index_edit');
+Route::post('/tenant/edit' , [tenantController::class , 'update'])->name('tenant.edit');
+Route::get('/tenant/delete/{id}' , [tenantController::class , 'destroy'])->name('tenant.delete');
