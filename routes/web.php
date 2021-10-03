@@ -1,8 +1,9 @@
 <?php
 
 use App\Http\Controllers\admin\PropretyController;
+use App\Http\Controllers\admin\rentPropertyController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\tenantController;
+use App\Http\Controllers\admin\tenantController;
 use App\Models\Property;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -38,3 +39,10 @@ Route::post('/tenants/add' , [tenantController::class , 'store'])->name('tenant.
 Route::get('/tenants/edit/{id}' , [tenantController::class , 'index_edit'])->name('index_edit');
 Route::post('/tenant/edit' , [tenantController::class , 'update'])->name('tenant.edit');
 Route::get('/tenant/delete/{id}' , [tenantController::class , 'destroy'])->name('tenant.delete');
+
+
+
+/*** Rent Properties  ***/
+Route::get('/rented_properties' , [rentPropertyController::class , 'index']);
+Route::get('/rent_property' , [rentPropertyController::class , 'rent_index']);
+Route::post('/rent_property' , [rentPropertyController::class , 'store'])->name('rent_property');

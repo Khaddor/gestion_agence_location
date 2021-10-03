@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\admin;
 
 use App\Models\Tenant;
+use App\Http\Controllers\Controller;
+
 use Illuminate\Http\Request;
 
 class tenantController extends Controller

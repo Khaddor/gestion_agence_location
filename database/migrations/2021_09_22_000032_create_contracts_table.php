@@ -19,8 +19,6 @@ class CreateContractsTable extends Migration
             $table->date('close_date');
             $table->integer('rent_amount');
             $table->string('rent_type');
-            $table->foreignId('Property_id');
-            $table->foreignId('Tenant_id');
             $table->timestamps();
         });
     }

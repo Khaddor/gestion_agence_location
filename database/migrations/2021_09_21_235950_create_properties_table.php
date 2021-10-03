@@ -23,7 +23,7 @@ class CreatePropertiesTable extends Migration
             $table->integer('isRented')->default('0');
             $table->date('rent_date')->nullable();
             $table->date('rend_end_date')->nullable();
-            $table->foreignId('Tenant_id')->nullable();
+            $table->foreignId('contract_id')->nullable();
             $table->timestamps();
         });
     }

@@ -21,6 +21,7 @@ class CreateTenantsTable extends Migration
             $table->text('address');
             $table->string('city');
             $table->string('image');
+            $table->foreignId('contract_id')->nullable();
             $table->timestamps();
         });
     }

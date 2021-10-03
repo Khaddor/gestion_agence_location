@@ -271,6 +271,25 @@ return [
                 ],
             ],
         ],
+
+        [
+            'text'    => 'Manage Rent',
+            'icon'    => 'fas fa-fw fa-book',
+            'submenu' => [
+                [
+                    'text' => 'Rent Property',
+                    'url'  => '/rent_property',
+                    'icon'    => 'fas fa-fw fa-building',
+                    
+                ],
+                [
+                    'text' => 'Occupied Property',
+                    'icon'    => 'fas fa-fw fa-building',
+                    'url'  => '/rented_properties',
+                ],
+            ],
+        ],
+
         [
             'text' => 'Manage Tenants',
             'icon' => 'fas fa-fw fa-users',

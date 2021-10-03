@@ -15,7 +15,8 @@ class Contract extends Model
         'date',
         'close_date',
         'rent_amount',
-        'rent_type'
+        'rent_type',
+      
     ];
 
     public function property (){
@@ -24,7 +25,7 @@ class Contract extends Model
     }
 
     public function tenant (){
-        return $this->hasOne(tenant::class);
+        return $this->hasOne(Tenant::class);
     }
 
 }
