@@ -12,7 +12,7 @@
     </div>
 @endif
 
-<div class="container">
+<div class="container bg-white p-4">
           <ul class="nav nav-tabs">
             <li class="nav-item">
               <a class="nav-link " aria-current="true" href="/tenants">List of Tenants </a>
@@ -28,20 +28,20 @@
             @csrf
 
             <label class="form-label" >Name : </label>
-            <input type="text" class="form-control col-lg-3" placeholder="Tenant name" name="name">
+            <input type="text" class="form-control col-lg-5" placeholder="Tenant name" name="name">
             
             <label class="form-label">Number : </label>
-            <input type="text" class="form-control col-lg-3" placeholder="Tenant number" name="number">
+            <input type="text" class="form-control col-lg-5" placeholder="Tenant number" name="number">
             
             <label class="form-label">Email : </label>
-            <input type="text" class="form-control col-lg-3" placeholder="Tenant email" name="email">   
+            <input type="text" class="form-control col-lg-5" placeholder="Tenant email" name="email">   
             
             <label class="form-label">Address : </label>
-            <textarea type="text"  class="form-control col-lg-3 "
+            <textarea type="text"  class="form-control col-lg-5 "
             rows="4" cols="50" placeholder="address ..." name="address"></textarea>
 
             <label class="form-label"> City :</label>
-            <input type="text" class="form-control col-lg-3" placeholder="Tenant city" name="city"> 
+            <input type="text" class="form-control col-lg-5" placeholder="Tenant city" name="city"> 
            
              <button type="submit" class="btn btn-primary mt-5 "> Add Tenant</button>
             <a class="btn btn-secondary mt-5" href="{{route('tenants_index')}} ">back</a>

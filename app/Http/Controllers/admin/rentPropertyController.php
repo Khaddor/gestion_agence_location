@@ -24,7 +24,7 @@ class rentPropertyController extends Controller
     public function rent_index (){
         
         $properties = Property::where('isRented','0')->get();
-        $tenants = Tenant::all();
+        $tenants = Tenant::where('contract_id' , null)->get();
 
         return view('admin.rents.rent_property')->with([
             'properties' => $properties,
@@ -32,6 +32,11 @@ class rentPropertyController extends Controller
         ]);
     }
 
+    public function property_index($id) {
+
+        $contract = Contract::find($id);
+        return view('admin.rents.rented_property')->with('contract' , $contract);
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -54,14 +59,21 @@ class rentPropertyController extends Controller
         $req->validate([
             'property' => 'required',
             'tenant' => 'required',
+            'image' => 'required',
             'rent_type' => 'required',
             'rent_amount' => 'required',
         ]);
+
+        
+        $newImageName = date('Y-m-d').'_'.$req->image->extension();
+        $req->image->move(\public_path('contracts/') , $newImageName);
+
 
         $contract = Contract::create([
             'rent_type' => $req->rent_type,
             'rent_amount' => $req->rent_amount,
             'date' => date("Y-m-d"),
+            'image' => $newImageName,
             'close_date' => $req->close_date
         ]);
         $contract->save();

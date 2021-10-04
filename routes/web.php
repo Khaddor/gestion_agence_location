@@ -43,6 +43,7 @@ Route::get('/tenant/delete/{id}' , [tenantController::class , 'destroy'])->name(
 
 
 /*** Rent Properties  ***/
-Route::get('/rented_properties' , [rentPropertyController::class , 'index']);
+Route::get('/rented_properties' , [rentPropertyController::class , 'index'])->name('rented_properties');
 Route::get('/rent_property' , [rentPropertyController::class , 'rent_index']);
 Route::post('/rent_property' , [rentPropertyController::class , 'store'])->name('rent_property');
+Route::get('/rented_property/{id}', [rentPropertyController::class , 'property_index']);

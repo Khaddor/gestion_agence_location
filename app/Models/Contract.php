@@ -16,6 +16,7 @@ class Contract extends Model
         'close_date',
         'rent_amount',
         'rent_type',
+        'image',
       
     ];
 

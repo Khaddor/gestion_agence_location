@@ -12,7 +12,7 @@
     </div>
 @endif
 
-<div class="container">
+<div class="container bg-white p-4">
           <ul class="nav nav-tabs">
             <li class="nav-item">
               <a class="nav-link " aria-current="true" href="/properties">List of Properties </a>

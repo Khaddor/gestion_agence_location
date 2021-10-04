@@ -13,7 +13,8 @@
     </div>
 @endif
 
-<div class="container">
+
+<div class="container bg-white p-4">
 
         <div class="">
           <ul class="nav nav-tabs ">
@@ -26,6 +27,14 @@
            
           </ul>
         </div>
+
+        <div class="row mt-5">
+          <label class="form-label mr-3">Search : </label>
+          
+          <input type="text" class="form-control col-lg-3" name="search" placeholder="Search ...">
+          <button class="btn btn-success ml-2"> Search</button>
+        </div>
+        
     <div class="card-body">
     <table class="table table-bordered table-striped">
         <thead>
@@ -85,7 +94,7 @@
           <div class="card mb-3" style="max-width: 540px;">
             <div class="row no-gutters">
               <div class="col-md-4">
-                <img src=" {{asset('/images/building.jpeg')}} " class="rounded" style="max-width:100%; max-height:100%;">
+                <img src=" {{asset('propertiesImages/'.$property->image)}} " class="rounded" style="max-width:100%; max-height:100%;">
               </div>
               <div class="col-md-8">
                 <div class="card-body">

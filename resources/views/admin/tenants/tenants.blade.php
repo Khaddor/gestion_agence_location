@@ -12,8 +12,9 @@
         {{Session::get('success')}}    
     </div>
 @endif
+    
 
-<div class="container">
+<div class="container bg-white p-4">
 
         <div class="">
           <ul class="nav nav-tabs ">
@@ -26,6 +27,14 @@
            
           </ul>
         </div>
+
+        <div class="row mt-5">
+          <label class="form-label mr-3">Search : </label>
+          
+          <input type="text" class="form-control col-lg-3" name="search" placeholder="Search ...">
+          <button class="btn btn-success ml-2"> Search</button>
+        </div>
+        
     <div class="card-body">
     <table class="table table-bordered table-striped">
         <thead>

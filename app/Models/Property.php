@@ -16,6 +16,7 @@ class Property extends Model
         'city',
         'address',
         'type',
+        'image',
         'description',
         'isRented',
         'rent_date',

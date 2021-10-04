@@ -57,19 +57,31 @@ class PropretyController extends Controller
      */
     public function store(Request $req)
     {
+        
         $req->validate([
             'name' => 'required',
             'city' => 'required',
             'address' => 'required',
             'description' => 'required',
+            'image' => 'required',
             'type' => 'required',
         ]);
+     /*  $image = $req->file('image');
+        $newImageName = time().'_'.$req->name.'.jpeg';
+        $image->move('propertiesImages/' , $newImageName);*/
+
+           
+
+            $newImageName = time() .'_'.$req->name .'.'.$req->image->extension();
+
+            $req->image->move(\public_path('propertiesImages'),$newImageName);
 
         $property = Property::create([
             'name' => $req->name,
             'city' => $req->city,
             'address' => $req->address,
             'description' => $req->description,
+            'image' => $newImageName,
             'type' => $req->type,
         ]);
 

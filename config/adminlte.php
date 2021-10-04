@@ -129,7 +129,7 @@ return [
     'classes_content' => '',
     'classes_sidebar' => 'sidebar-dark-primary elevation-4',
     'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-white navbar-light',
+    'classes_topnav' => 'navbar-primary navbar-dark',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
@@ -262,7 +262,6 @@ return [
                 [
                     'text' => 'My Properties',
                     'route'  => 'properties_index',
-                    'icon'    => 'fas fa-fw fa-building',
                     
                 ],
                 [
@@ -279,12 +278,10 @@ return [
                 [
                     'text' => 'Rent Property',
                     'url'  => '/rent_property',
-                    'icon'    => 'fas fa-fw fa-building',
                     
                 ],
                 [
                     'text' => 'Occupied Property',
-                    'icon'    => 'fas fa-fw fa-building',
                     'url'  => '/rented_properties',
                 ],
             ],
@@ -295,11 +292,27 @@ return [
             'icon' => 'fas fa-fw fa-users',
             'route' => 'tenants_index'
         ],
-     
+        [
+            'text' => 'Invoices',
+            'url'  => '#',
+            'icon' => 'fas fa-fw fa-book',
+        ],
+        [
+            'text' => 'Maintenance',
+            'url'  => '#',
+            'icon' => 'fas fa-fw fa-book',
+
+        ],
+        [
+            'text' => 'Settings',
+            'url'  => '#',
+            'icon' => 'fas fa-fw fa-book',
+
+        ],
      
 
 
-        ['header' => 'labels'],
+      /***['header' => 'labels'],
         [
             'text'       => 'important',
             'icon_color' => 'red',
@@ -314,7 +327,7 @@ return [
             'text'       => 'information',
             'icon_color' => 'cyan',
             'url'        => '#',
-        ],
+        ], */  
     ],
 
     /*

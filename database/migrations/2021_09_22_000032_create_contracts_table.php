@@ -17,6 +17,7 @@ class CreateContractsTable extends Migration
             $table->id();
             $table->date('date');
             $table->date('close_date');
+            $table->string('image');
             $table->integer('rent_amount');
             $table->string('rent_type');
             $table->timestamps();
