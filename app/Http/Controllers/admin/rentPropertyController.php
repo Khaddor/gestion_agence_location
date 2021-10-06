@@ -90,48 +90,33 @@ class rentPropertyController extends Controller
 
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+    public function getTenant ($id){
+        $tenant = Tenant::find($id);
+        
+
+        $name = $tenant->name;
+        $number = $tenant->phone_number;
+        $email = $tenant->email;
+        $address = $tenant->address;
+        $city = $tenant->city;
+
+        return response()->json([
+            'id' => $id,
+            'name' => $name,
+            'number' => $number,
+            'email' => $email,
+            'city' => $city,
+            'address' => $address,
+         ]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
+    public function getProperty ($id){
+        $property = Property::find($id);
+
+        return response()->json([
+            'property' => $property,
+        ]);
+
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

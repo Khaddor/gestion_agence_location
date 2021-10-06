@@ -47,3 +47,5 @@ Route::get('/rented_properties' , [rentPropertyController::class , 'index'])->na
 Route::get('/rent_property' , [rentPropertyController::class , 'rent_index']);
 Route::post('/rent_property' , [rentPropertyController::class , 'store'])->name('rent_property');
 Route::get('/rented_property/{id}', [rentPropertyController::class , 'property_index']);
+Route::get('/getTenant/{id}' , [rentPropertyController::class , 'getTenant']);
+Route::get('/getProperty/{id}' , [rentPropertyController::class , 'getProperty']);
