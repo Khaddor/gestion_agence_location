@@ -14,7 +14,7 @@
 @endif
     
 
-<div class="container bg-white p-4">
+<div class="container  bg-white p-4">
 
         <div class="">
           <ul class="nav nav-tabs ">
@@ -29,14 +29,13 @@
         </div>
 
         <div class="row mt-5">
-          <label class="form-label mr-3">Search : </label>
+          <label class="form-label  mr-3">Search : </label>
           
-          <input type="text" class="form-control col-lg-3" name="search" placeholder="Search ...">
-          <button class="btn btn-success ml-2"> Search</button>
+          <input type="text" class="form-control form-control-sm col-lg-3" name="search" placeholder="Search ...">
+          <button class="btn btn-success btn-sm ml-2"> Search</button>
         </div>
         
-    <div class="card-body">
-    <table class="table table-bordered table-striped">
+    <table class="table table-bordered table-striped table-sm text-center mt-3">
         <thead>
             <tr>
                 <th> ID</th>
@@ -57,7 +56,7 @@
                 <td>{{$tenant->name}} </td>
                 <td>{{$tenant->phone_number}} </td>
                 <td>{{$tenant->email}} </td>
-                <td>{{$tenant->address}} </td>
+                <td>{{Str::limit($tenant->address, 20)}} </td>
                 <td>{{$tenant->city}} </td>
                 <td> 
                   <a href="{{route('index_edit' , $tenant->id)}} " class="btn btn-info btn-sm"><i class="fa fa-edit fa-sm"></i> </a>

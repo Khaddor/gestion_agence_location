@@ -23,8 +23,7 @@
     <button class="btn btn-success ml-2"> Search</button>
   </div>
   
-    <div class="card-body">
-    <table class="table table-bordered table-striped">
+    <table class="table table-bordered table-striped table-sm text-center mt-3 ">
         <thead>
             <tr>
                 <th> ID</th>

@@ -246,7 +246,7 @@ return [
         [
             'text' => 'Dashboard',
             'url'  => '/',
-            'icon' => 'fas fa-fw fa-book',
+            'icon' => 'fas fa-fw fa-columns',
         ],
         [
             'text' => 'profile',
@@ -293,20 +293,20 @@ return [
             'route' => 'tenants_index'
         ],
         [
-            'text' => 'Invoices',
-            'url'  => '#',
+            'text' => 'Generate Invoice',
+            'route' => 'invoices_index',
             'icon' => 'fas fa-fw fa-book',
         ],
         [
             'text' => 'Maintenance',
             'url'  => '#',
-            'icon' => 'fas fa-fw fa-book',
+            'icon' => 'fas fa-fw fa-wrench',
 
         ],
         [
             'text' => 'Settings',
             'url'  => '#',
-            'icon' => 'fas fa-fw fa-book',
+            'icon' => 'fas fa-fw fa-cog',
 
         ],
      

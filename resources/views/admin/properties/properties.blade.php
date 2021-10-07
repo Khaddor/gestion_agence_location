@@ -14,7 +14,7 @@
 @endif
 
 
-<div class="container bg-white p-4">
+<div class="container bg-white p-4  ">
 
         <div class="">
           <ul class="nav nav-tabs ">
@@ -31,22 +31,21 @@
         <div class="row mt-5">
           <label class="form-label mr-3">Search : </label>
           
-          <input type="text" class="form-control col-lg-3" name="search" placeholder="Search ...">
-          <button class="btn btn-success ml-2"> Search</button>
+          <input type="text" class="form-control form-control-sm col-lg-3" name="search" placeholder="Search ...">
+          <button class="btn btn-success btn-sm ml-2"> Search</button>
         </div>
         
-    <div class="card-body">
-    <table class="table table-bordered table-striped">
+    <table class="table table-bordered table-striped table-sm mt-3 p-0 " role="grid">
         <thead>
             <tr>
-                <th> ID</th>
-                <th>Name</th>
-                <th>City</th>
-                <th>Address</th>
-                <th>Type</th>
-                <th>Description</th>
-                <th>Availbality</th>
-                <th>Action</th>
+                <th  class="text-center"> ID</th>
+                <th class="text-center">Name</th>
+                <th class="text-center">City</th>
+                <th class="text-center">Address</th>
+                <th class="text-center">Type</th>
+                <th class="text-center">Description</th>
+                <th class="text-center">Availbality</th>
+                <th class="text-center">Action</th>
 
             </tr>
         </thead>
@@ -54,24 +53,24 @@
         <tbody>
 @foreach ($properties as $property)
     <tr>
-        <td>{{$property->id}} </td>
-        <td> {{$property->name}} </td>
-        <td> {{$property->city}} </td>
-        <td> {{$property->address}} </td>
-        <td> {{$property->city}} </td>
-        <td> {{Str::limit($property->description, 20)}}</td>
+        <td class="text-center">{{$property->id}} </td>
+        <td class="text-center"> {{$property->name}} </td>
+        <td class="text-center"> {{$property->city}} </td>
+        <td class="text-center">  {{Str::limit($property->address, 20)}} </td>
+        <td class="text-center">  {{Str::limit($property->type, 20)}} </td>
+        <td class="text-center"> {{Str::limit($property->description, 20)}}</td>
         
         @if ($property->isRented ==0)
-                <td> <span class="badge badge-success"> Vaccant</span> </td>
+                <td class="text-center" > <span class="badge badge-success"> Vaccant</span> </td>
         @else
-                <td> <span class="badge badge-danger"> Occupied</span> </td>
+                <td class="text-center" > <span class="badge badge-danger"> Occupied</span> </td>
         @endif
-        <td> 
+        <td  class="text-center" style="width: 110px"> 
               <!-- Button trigger modal -->
         <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#exampleModal{{$property->id}}">
                 <i class="fa fa-eye fa-sm"></i>
         </button>
-            <a class="btn btn-success btn-sm" href="/properties/edit/{{$property->id}} "> <i class="fa fa-edit fa-sm"></i></a>
+            <a class="btn btn-success btn-sm " href="/properties/edit/{{$property->id}} "> <i class="fa fa-edit fa-sm"></i></a>
        <button class="btn btn-danger btn-sm"><i class="fa fa-trash fa-sm"></i></button>
           </td>
     </tr>

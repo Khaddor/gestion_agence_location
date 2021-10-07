@@ -58,7 +58,7 @@
                         <option value="Yearly">Yearly </option>
                     </select>
 
-                    <label class="form-label">Rent amount : </label>
+                    <label class="form-label">Contract Photo : </label>
                     <input type="file" class="form-control-file "   name="image"> 
 
                     <label class="form-label">Rent amount : </label>

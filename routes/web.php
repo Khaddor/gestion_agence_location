@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admin\invoicesController;
 use App\Http\Controllers\admin\PropretyController;
 use App\Http\Controllers\admin\rentPropertyController;
 use App\Http\Controllers\HomeController;
@@ -49,3 +50,12 @@ Route::post('/rent_property' , [rentPropertyController::class , 'store'])->name(
 Route::get('/rented_property/{id}', [rentPropertyController::class , 'property_index']);
 Route::get('/getTenant/{id}' , [rentPropertyController::class , 'getTenant']);
 Route::get('/getProperty/{id}' , [rentPropertyController::class , 'getProperty']);
+
+
+
+/** Generate Invoices */
+Route::get('/generate_invoices' , [invoicesController::class , 'index'])->name('invoices_index');
+Route::get('/generate_invoices/{id}' , [invoicesController::class , 'get_contract'])->name('get_contract');
+Route::post('/generate_pdf' , [invoicesController::class , 'generate_pdf'])->name('generate_pdf');
+
+

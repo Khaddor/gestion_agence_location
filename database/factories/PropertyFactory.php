@@ -25,7 +25,7 @@ class PropertyFactory extends Factory
             //
             'name' => $this->faker->name(),
             'address' => $this->faker->address(),
-            'city' => $this->faker->address(),
+            'city' => $this->faker->city(),
             'type' => $this->faker->word(),
             'description' => $this->faker->text(20),
             'image' => 'test'
