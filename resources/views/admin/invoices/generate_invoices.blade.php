@@ -26,7 +26,7 @@
 
           
         </div>
-    <div id="tableDiv" style="display: none">
+    <div id="tableDiv" style="display: none" class="bg-white p-4 ">
         <h4><b>Contract Info : </b></h4><br>
             <table class="table table-bordered table-striped text-center"  id="table">
 
@@ -45,7 +45,7 @@
                 </tbody>
             </table><br><br>
 
-            <h3>Select Invoice's Date</h3><hr><br>
+            <h3><b> Select Invoice's Date</b></h3><hr><br>
             <form action="{{route('generate_pdf')}} " method="POST">
                 @csrf
                 
@@ -89,7 +89,7 @@ $(document).ready(function(){
             type : 'GET',
             dataType : 'json',
             success : function(response){
-                row = " <tr><td>"+response.contract.id+"</td><td>"+response.pName+"</td><td>"+response.tName+"</td><td>--------</td><td>"+response.amount+"</td></tr> ";
+                row = " <tr><td>"+response.contract.id+"</td><td>"+response.pName+"</td><td>"+response.tName+"</td><td>--------</td><td>"+response.amount+" DH </td></tr> ";
                 $('#table').append(row);
                  $('#contract_id').val(response.contract.id);
             }

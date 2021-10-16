@@ -2,7 +2,7 @@
 
 
 @section('content_header')
-  <h3 class="m-3">Occupied Properties</h3><hr>
+  <h3 class="m-3"><b> Occupied Properties :</b></h3><hr>
 @stop
 
 @section('content')
@@ -61,6 +61,12 @@
           @endforeach
         </tbody>
     </table>
+    <div class="float-right">
+      {{$contracts->links()}}
+    </div>
+
+
+
 </div>
 
 

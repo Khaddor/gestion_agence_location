@@ -130,6 +130,11 @@
             
         </tbody>
     </table>
+
+    <div class="float-right">
+      {{$properties->links()}}
+    </div>
+
 </div>
 
 

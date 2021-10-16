@@ -294,8 +294,14 @@ return [
         ],
         [
             'text' => 'Generate Invoice',
-            'route' => 'invoices_index',
-            'icon' => 'fas fa-fw fa-book',
+            'route' => 'generate_invoices',
+            'icon' => 'fas fa-fw fa-newspaper',
+        ],
+        [
+            'text' => 'Invoices',
+            'route'  => 'invoices_index',
+            'icon' => 'fas fa-fw fa-newspaper',
+
         ],
         [
             'text' => 'Maintenance',

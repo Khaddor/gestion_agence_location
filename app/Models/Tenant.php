@@ -19,4 +19,8 @@ class Tenant extends Model
         'image',
         'email'
     ];
+
+    public function invoices (){
+        return $this->hasMany(Invoice::class);
+    }
 }

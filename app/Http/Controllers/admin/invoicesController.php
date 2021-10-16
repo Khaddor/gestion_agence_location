@@ -4,6 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Contract;
+use App\Models\Invoice;
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Support\Facades\Redirect;
@@ -23,6 +24,13 @@ class invoicesController extends Controller
         return view('admin.invoices.generate_invoices')->with([
             'contracts' => $contracts
         ]);
+    }
+
+    public function invoices_index (){
+
+        $invoices = Invoice::paginate(10);
+        return view('admin.invoices.invoices_index')
+                                    ->with(['invoices' => $invoices]);
     }
 
 

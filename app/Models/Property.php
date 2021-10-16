@@ -23,8 +23,15 @@ class Property extends Model
         'rent_end_date'
     ];
 
+    public function invoices (){
+        return $this->hasMany(Property::class);
+    }
+
     public function tenant(){
         
-        return $this->hasOne(tenant::class);
+        return $this->hasOne(Tenant::class);
     }
+
+   
+
 }

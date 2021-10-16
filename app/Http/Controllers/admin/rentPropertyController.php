@@ -23,7 +23,7 @@ class rentPropertyController extends Controller
     public function index()
     {
         
-        $contracts = Contract::all();
+        $contracts = Contract::paginate(10);
         return view('admin.rents.rented_properties')->with('contracts', $contracts);
     }
     public function rent_index (){

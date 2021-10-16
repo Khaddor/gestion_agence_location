@@ -16,14 +16,19 @@ class Invoice extends Model
         'date',
         'rent_type',
         'amount',
-        'payment_date'
+        'payment_date',
+        'property_id',
+        'tenant_id',
+        'contract_id'
     ];
 
     public function property (){
-        return $this->hasOne(property::class);
+        return $this->belongsTo(Property::class);
     }
-
     public function tenant(){
-        return $this->hasOne(Tenant::class);
+        return $this->belongsTo(Tenant::class);
+    }
+    public function contract () {
+        return $this->belongsTo(Contract::class);
     }
 }

@@ -40,6 +40,7 @@ Route::post('/tenants/add' , [tenantController::class , 'store'])->name('tenant.
 Route::get('/tenants/edit/{id}' , [tenantController::class , 'index_edit'])->name('index_edit');
 Route::post('/tenant/edit' , [tenantController::class , 'update'])->name('tenant.edit');
 Route::get('/tenant/delete/{id}' , [tenantController::class , 'destroy'])->name('tenant.delete');
+Route::get('/search_tenants' , [tenantController::class , 'search'])->name('search_tenants');
 
 
 
@@ -54,8 +55,9 @@ Route::get('/getProperty/{id}' , [rentPropertyController::class , 'getProperty']
 
 
 /** Generate Invoices */
-Route::get('/generate_invoices' , [invoicesController::class , 'index'])->name('invoices_index');
+Route::get('/generate_invoices' , [invoicesController::class , 'index'])->name('generate_invoices');
 Route::get('/generate_invoices/{id}' , [invoicesController::class , 'get_contract'])->name('get_contract');
 Route::post('/generate_pdf' , [invoicesController::class , 'generate_pdf'])->name('generate_pdf');
+Route::get('/invoices' , [invoicesController::class , 'invoices_index'])->name('invoices_index');
 
 

@@ -13,8 +13,8 @@
   <div class="row">
     
 
-    <div class="col-lg-6 " style=" border-right: 1px solid #333;">
-        <h3>Property Information :</h3>
+    <div class="col-lg-6 bg-white p-4 " style=" border-right: 1px solid #333;">
+        <h3>Property Information :</h3><hr>
         <div class="card-body">
           <h5 class="card-title"><b>Property ID :  </b><span class="badge badge-primary">   {{  $contract->property->id}} </span> </h5>
           <br><br>
@@ -32,7 +32,7 @@
           
         </div>
     </div>
-    <div class="col-lg-6">
+    <div class="col-lg-6 bg-white p-4">
       <h3>Tenant Information :</h3><hr>
 
         <div class="card-body">
@@ -54,7 +54,7 @@
     </div>
   </div>
 
-<div class="row pb-5">
+<div class="row pb-5 bg-white p-4">
     <div class="col-lg-6 ">
 
       <h3>Contract Information</h3><hr><br>

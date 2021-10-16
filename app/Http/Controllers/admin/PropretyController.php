@@ -22,7 +22,7 @@ class PropretyController extends Controller
     
     public function index()
     {
-        $properties = Property::all();
+        $properties = Property::paginate(10);
 
         return view('admin.properties.properties')->with([
             'properties' => $properties

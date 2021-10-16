@@ -28,5 +28,8 @@ class Contract extends Model
     public function tenant (){
         return $this->hasOne(Tenant::class);
     }
+    public function invoices (){
+        return $this->hasMany(Invoice::class);
+    }
 
 }

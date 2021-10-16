@@ -20,8 +20,9 @@ class CreateInvoicesTable extends Migration
             $table->string('rent_type');
             $table->integer('amount');
             $table->date('payment_date');
-            $table->foreignId('Property_id');
-            $table->foreignId('Tenant_id');
+            $table->foreignId('property_id')->nullable();
+            $table->foreignId('tenant_id')->nullable();
+            $table->foreignId('contract_id')->nullable();
             $table->timestamps();
         });
     }
