@@ -61,7 +61,7 @@ class invoicesController extends Controller
 
         $pdf = PDF::loadView('admin.invoices.invoice' , $data);
 
-          return $pdf->download('invoice'.$req->contract_id.'_'.$req->date.'.pdf');
+         return  $pdf->download('invoice'.$req->contract_id.'_'.$req->date.'.pdf');
          // return redirect()->back();
 
 

@@ -34,9 +34,9 @@ class DatabaseSeeder extends Seeder
             'rent_type' => 'studio',
             'amount' => 15000,
             'payment_date' => '2019-05-06',
-            'Property_id' => null,
-            'Tenant_id' => null,
-            'contract_id' => null,
+            'Property_id' => 1,
+            'Tenant_id' => 1,
+            'contract_id' => 1,
             
 
         ]);

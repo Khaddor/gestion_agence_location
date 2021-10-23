@@ -27,7 +27,7 @@
         <button class="btn btn-primary mt-4 " ><b>PDF</b></button>
 
         
-    <table class="table table-bordered table-striped table-sm text-center mt-2" id="table">
+<table class="table table-bordered table-striped table-sm text-center mt-2" id="table">
         <thead>
             <tr>
                 <th> ID</th>
@@ -43,28 +43,31 @@
             </tr>
         </thead>
 
-        <tbody>
-        @foreach ($invoices as $invoice)
-                
-        <tr>
-          <td>{{$invoice->id}}</td>
-          <td>{{$invoice->number}}</td>
-          <td>{{$invoice->property->name}}</td>
-          <td>{{$invoice->tenant->name}}</td>
-          <td>{{$invoice->date}}</td>
-          <td>{{$invoice->rent_type}}</td>
-          <td>{{$invoice->amount}} DH</td>
-          <td>{{$invoice->payment_date}}</td>              
-            <td> 
-              <a href="#" class="btn btn-info btn-sm"><i class="fa fa-edit fa-sm"></i> </a>
-              <a href="# " onclick="return confirm('Are you sure?')"  class="btn btn-danger btn-sm"><i class="fa fa-trash fa-sm"></i> </a>
-
-            </td>
-        </tr>
-        @endforeach
+        
+            <tbody>
+                @foreach ($invoices as $invoice)
+                            <tr>
+                                <td>{{$invoice->id}}</td>
+                                <td>{{$invoice->number}}</td>
+                                <td>{{$invoice->property->name}}</td>
+                                <td>{{$invoice->tenant->name}}</td>
+                                <td>{{$invoice->date}}</td>
+                                <td>{{$invoice->rent_type}}</td>
+                                <td>{{$invoice->amount}} DH</td>
+                                <td>{{$invoice->payment_date}}</td>              
+                                    <td> 
+                                    <a href="#" class="btn btn-info btn-sm"><i class="fa fa-edit fa-sm"></i> </a>
+                                    <a href="# " onclick="return confirm('Are you sure?')"  class="btn btn-danger btn-sm"><i class="fa fa-trash fa-sm"></i> </a>
             
-        </tbody>
-    </table>
+                                    </td>
+                            </tr>         
+                @endforeach
+                    
+            </tbody>
+            
+            
+    
+</table>
 
     <div class="float-right">
         {{ $invoices->links() }}

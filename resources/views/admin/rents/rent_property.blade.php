@@ -77,8 +77,8 @@
     </div>
     <div class="col-lg-7">
         <h4><b> Property Information</b></h4>
-            <div class="card-body">
-                    <img src="#" id="property_image" class="rounded float-right" style="max-width:200px;">
+          <!--  <div class="card-body">
+                    <img src="#" id="property_image" class="img-circle float-right" style="max-width:150px;">
 
                     <h5 class="card-title"><b>Property ID :  </b><span id="property_id">----------</span></h5>
                     <br><br>
@@ -94,12 +94,37 @@
                 
     
                
-            </div> <hr>
-        
+            </div> <hr>-->
+         <div class="card-body">
+            <table class="table table-bordered  text-center">
+                <tr>
+                  <th >Property ID</th>
+                  <td id="property_id">------ </td>
+                </tr>
+                <tr>
+                  <th>Property Name</th>
+                  <td id="property_name">------ </td>
+                </tr>
+                <tr>
+                  <th>Property City</th>
+                  <td id="property_city">------ </td>
+                </tr>
+                <tr>
+                  <th>Property Address</th>
+                  <td id="property_address">------ </td>
+                </tr>
+                <tr>
+                  <th>Property Type</th>
+                  <td id="property_type">------ </td>
+                </tr>
+              </table> 
+             <div class="container"> <img src="#" id="property_image" class="img-circle" style="max-width:100px;"></div>
+            </div>
+            <hr>
         <h4><b> Tenant Information</b></h4>
         <div class="card-body">
 
-            <h5 class="card-title"><b>Tenant ID :  </b><span id="tenant_id"> --------</span></h5>
+         <!--   <h5 class="card-title"><b>Tenant ID :  </b><span id="tenant_id"> --------</span></h5>
             <br><br>
             <h5 class="card-title"><b> Tenant Name :</b> <span id="tenant_name">-------- </span></h5><br>
             <br>
@@ -110,6 +135,34 @@
             <h5 class="card-title"><b> Tenant Address :</b> <span id="tenant_address"> --------</span></h5><br>
             <br>
             <h5 class="card-title"><b> Tenant City :</b> <span id="tenant_city"> --------</span></h5><br>
+         -->
+         <table class="table table-bordered  text-center">
+            <tr>
+              <th >Tenant ID</th>
+              <td id="tenant_id">------ </td>
+            </tr>
+            <tr>
+              <th>Tenant Name</th>
+              <td id="tenant_name">------ </td>
+            </tr>
+            <tr>
+              <th>Tenant Number</th>
+              <td id="tenant_number">------ </td>
+            </tr>
+            <tr>
+              <th>Property Address</th>
+              <td id="tenant_address">------ </td>
+            </tr>
+            <tr>
+              <th>Property Email</th>
+              <td id="tenant_email">------ </td>
+            </tr>
+            <tr>
+                <th>Property City</th>
+                <td id="tenant_city">------ </td>
+              </tr>
+          </table> 
+         
         </div><hr>
         
           
